@@ -1,0 +1,52 @@
+-var path = '';
+-var head_url = 'https://mv-centr.ru/';
+-var head_title = '«Записи встреч по арт-терапии»';
+-var head_description = 'Глубинная трансформация через творчество и контакт с собой';
+-var head_img = 'img/banner.jpg';
+-var styles = path+'css/styles.min.css';
+-var fav_ico = path+'favicon.ico';
+-var fav_png = path+'favicon.png';
+-var fav_ap = path+'favicon.svg';
+-var scriptsLbs = path+'js/libs.min.js';
+-var scripts = path+'js/scripts.js';
+-var noref = true;
+-var tk = true;
+-var ah = true;
+-var fb_content = '257953674358265';
+-var fb_content_2 = '588467178666561';
+-var ik = true;
+//- -var action = '';
+//- -var group = '';
+//- -var formId = '';
+//- -var formVc = '';
+//- -var footer_title = true
+//- -var oferta = 'https://mastervision.su/oferta.docx'
+
+mixin b(cl, href, p, target, id)
+	a.button(class=cl href!=href target=target id=id)=p
+mixin gt(cl, h3)
+	h3.general-title(class=cl)=h3
+mixin imgs(cl, src ,alt)
+	img(class=cl src=path+src alt=alt)
+
+doctype html
+html(lang="ru")
+	head
+		include pug/head
+		include pug/scripts/head_scripts
+	body
+		include pug/scripts/body_top_scripts
+		.wrapper
+			include pug/main/1-main
+			include pug/main/2-about
+			include pug/main/3-can
+			include pug/main/4-line
+			include pug/main/5-get
+			include pug/main/6-tasks
+			include pug/main/7-author
+			include pug/main/8-certs
+			include pug/main/9-last
+		include pug/base/2-footer
+		include pug/base/3-scripts
+		//- include pug/scripts/chat
+		include pug/scripts/body_bottom_scripts

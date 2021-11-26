@@ -1,0 +1,35 @@
+section#certs
+	.container
+		#certs-slider.carousel.slide(data-ride="carousel")
+			.carousel-indicators
+				li.active(data-target="#certs-slider" data-slide-to="0")
+				li(data-target="#certs-slider" data-slide-to="1")
+				li(data-target="#certs-slider" data-slide-to="2")
+			.carousel-inner(role="listbox")
+				.item.active
+					+imgs('cert-slider-img', 'img/certs/cert-1.jpg', 'Сертификат 1')
+				each n in [2,3,4,5,6,7,8,9,10,11,12,13,14]
+					.item
+						+imgs('cert-slider-img', 'img/certs/cert-'+n+'.jpg', 'Сертификат '+n)
+			a.left.carousel-control(href="#certs-slider" role="button" data-slide="prev")
+				span.glyphicon.glyphicon-chevron-left(aria-hidden="true")
+			a.right.carousel-control(href="#certs-slider" role="button" data-slide="next")
+				span.glyphicon.glyphicon-chevron-right(aria-hidden="true")
+		#photos-slider.carousel.slide(data-ride="carousel")
+			.carousel-indicators
+				li.active(data-target="#photos-slider" data-slide-to="0")
+				li(data-target="#photos-slider" data-slide-to="1")
+				li(data-target="#photos-slider" data-slide-to="2")
+			.carousel-inner(role="listbox")
+				.item.active
+					+imgs('cert-slider-img', 'img/certs/photo-1.jpg', 'Сертификат 1')
+				-var f = 1;
+				while f <22
+					.item
+						-f++
+						+imgs('cert-slider-img', 'img/certs/photo-'+f+'.jpg', 'Сертификат '+f)
+					//- each n in [2,3,4,5,6,7,8,9,10,11,12,13,14]
+			a.left.carousel-control(href="#photos-slider" role="button" data-slide="prev")
+				span.glyphicon.glyphicon-chevron-left(aria-hidden="true")
+			a.right.carousel-control(href="#photos-slider" role="button" data-slide="next")
+				span.glyphicon.glyphicon-chevron-right(aria-hidden="true")
