@@ -8,7 +8,7 @@ section#certs
 				each n in [2,3,4,5,6,7,8,9,10,11,12,13,14]
 					.item
 						+imgs('cert-slider-img', 'img/certs/cert-'+n+'.jpg', 'Сертификат '+n)
-			.carousel-indicators
+			ul.carousel-indicators
 				li.active(data-target="#certs-slider" data-slide-to="0")
 				each l in [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
 					li(data-target="#certs-slider" data-slide-to=l)
@@ -24,7 +24,7 @@ section#certs
 						-f++
 						+imgs('cert-slider-img', 'img/certs/photo-'+f+'.jpg', 'Сертификат '+f)
 					//- each n in [2,3,4,5,6,7,8,9,10,11,12,13,14]
-			.carousel-indicators
+			ul.carousel-indicators
 				li.active(data-target="#photos-slider" data-slide-to="0")
 				-var e = 1;
 				while e <22

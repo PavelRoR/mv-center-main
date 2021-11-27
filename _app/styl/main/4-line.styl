@@ -1,9 +1,11 @@
 #grey-line
-	padding 60px 0
+	padding 60px 0 50px 
 	text-align center
 	background-color: #f5f5f5
 	.container
 		position relative
+	@media screen and (max-width 560px)
+		padding 40px 0 30px
 .grey-line-img
 	position absolute
 	left -20%
@@ -11,7 +13,10 @@
 	animation fr
 	animation-duration: 4s
 	animation-iteration-count: infinite
-	
+	@media screen and (max-width 991px)
+		left: -40%
+	@media screen and (max-width 386px)
+		left -80%
 @keyframes fr
 	0%
 		transform: translateX(0px)translateY(0px)rotate(0deg)scale(1,1);
@@ -21,3 +26,5 @@
 		animation-timing-function: linear;
 	100%
 		transform: translateX(0px)translateY(0px)rotate(0deg)scale(1,1);
+.grey-line-text
+	margin-bottom: 10px

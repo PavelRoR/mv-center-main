@@ -1,33 +1,59 @@
 #certs
 	padding 0 0 80px
+	@media screen and (max-width 991px)
+		padding 0 0 60px
 .carousel
 	width 100%
 	max-width 720px
 	margin 0 auto
-.carousel-inner > .item > a > img, .carousel-inner > .item > img, .img-responsive
+#certs-slider .cert-slider-img
+#photos-slider .cert-slider-img
 	width 100%
 	display block
 	margin 0 auto
 	object-fit: cover
 	object-position: center
 	height: 574px
+#certs-slider
+	@media screen and (max-width 767px)
+		max-width 550px
+	@media screen and (max-width 560px)
+		max-width 375px
+	@media screen and (max-width 386px)
+		max-width none
+#certs-slider .cert-slider-img
+	@media screen and (max-width 767px)
+		height 400px
+	@media screen and (max-width 560px)
+		height: 300px
+	@media screen and (max-width 386px)
+		height: 200px
+#photos-slider .cert-slider-img
+	@media screen and (max-width 767px)
+		height: auto
 .carousel-inner
 	width 90%
 	margin 0 auto
+	@media screen and (max-width 767px)
+		width 100%
 .carousel-indicators
 	position: static
 	margin 0 auto
+	@media screen and (max-width 386px)
+		width 50%
 	li
 		background-color: #c7c7c7
 		border 0
 		transition: all .3s ease
 		margin 0
+		width 8px
+		height: 8px
 		&.active
 		&:hover
 			border 0
 			background-color: #222
-			width 10px
-			height: 10px
+			width 8px
+			height: 8px
 .carousel-control
 	width 40px
 	height: 40px
@@ -41,6 +67,13 @@
 	font-family: PH
 	font-size: 22px
 	transition: all .3s ease
+	@media screen and (max-width 767px)
+		top auto
+		bottom: -15px
+	@media screen and (max-width 560px)
+		bottom: -25px
+	@media screen and (max-width 386px)
+		bottom: 0
 	&:focus
 		opacity 1
 		color #222
@@ -58,15 +91,21 @@
 		right -10px
 #photos-slider
 	margin 80px auto 50px
+	@media screen and (max-width 991px)
+		margin 60px auto 50px
 .form
 	width 100%
 	max-width 430px
 	margin 0 auto
+	@media screen and (max-width 560px)
+		max-width 380px
 .form-title
 	font-family: PH
 	font-size: 26px
-	margin-bottom: 10px
+	margin-bottom: 20px
 	text-align center
+	@media screen and (max-width 560px)
+		font-size: 22px
 .input
 	display block
 	width 100%
@@ -116,6 +155,8 @@ input:-webkit-autofill
 	font-size: 12px
 	font-weight: 200
 	color #5c5b5b
+	@media screen and (max-width 560px)
+		line-height: 18px
 .checking .check-label a
 	text-decoration: none
 	border-bottom: 1px dashed

@@ -9,9 +9,22 @@
 		color #d1bb90
 		line-height: 1.2
 		margin-top: -15px
+		text-align center
+		@media screen and (max-width 1230px)
+			font-size: 80px
+		@media screen and (max-width 1199px)
+			font-size: 60px
+		@media screen and (max-width 386px)
+			font-size: 40px
 	&-img
 		display block
 		width 100%
 		position absolute
 		top 100%
 		left 0
+		@media screen and (max-width 991px)
+			position: static
+			margin-bottom: 40px
+		@media screen and (max-width 386px)
+			max-width 80%
+			margin 0 auto 30px

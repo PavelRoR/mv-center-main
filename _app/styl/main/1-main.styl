@@ -6,6 +6,15 @@
 	background-position: center
 	background-size: cover
 	margin-bottom: 80px
+	position relative
+	@media screen and (max-width 991px)
+		margin-bottom: 60px
+		padding 80px 0
+	@media screen and (max-width 560px)
+		padding 60px 0
+		margin-bottom: 40px
+	@media screen and (max-width 386px)
+		padding 40px 0
 	&:before
 		content ''
 		display block
@@ -17,6 +26,9 @@
 		right 0
 		bottom 0
 		background-image linear-gradient(top, rgba(0,0,0,0.30), rgba(0,0,0,0.30))
+	@media screen and (max-width 386px)
+		&:before
+			background-image linear-gradient(top, rgba(0,0,0,0.50), rgba(0,0,0,0.50))
 .main
 	&-info
 		min-height 100vh
@@ -32,17 +44,32 @@
 		letter-spacing: 0.5px;
 		position relative
 		z-index 20
+		@media screen and (max-width 991px)
+			min-height 1px
+			display block
 	&-title
 		font-family: PH
 		font-size: 72px
 		text-transform uppercase
 		line-height: 1.12
+		@media screen and (max-width 991px)
+			font-size: 48px
+		@media screen and (max-width 560px)
+			font-size: 36px
+		@media screen and (max-width 386px)
+			font-size: 30px
 	&-subtitle
 		margin: 30px 0
 		font-family: PH
 		font-size: 32px
 		text-transform uppercase
+		@media screen and (max-width 991px)
+			font-size: 28px
+		@media screen and (max-width 560px)
+			font-size: 22px
 .down
+	display block
+	margin 0 auto
 	width 30px
 	height: 30px
 	border-bottom: 3px solid #fff

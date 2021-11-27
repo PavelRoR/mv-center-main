@@ -1,4 +1,15 @@
 $(document).ready(function () {
+    $(function () {
+        var isIE = false || !!document.documentMode;
+
+        if (isIE) {
+            var head = document.getElementsByTagName("head")[0];
+            var link = document.createElement("link");
+            link.rel = "stylesheet";
+            link.href = "css/ie.min.css";
+            head.appendChild(link);
+        }
+    });
     /* Якорь */
     $("a[href='#about']").click(function (h) {
         h.preventDefault();
