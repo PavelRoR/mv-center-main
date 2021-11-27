@@ -1,25 +1,20 @@
 section#certs
 	.container
+		+gt('', 'Документы об образовании')
 		#certs-slider.carousel.slide(data-ride="carousel")
-			.carousel-indicators
-				li.active(data-target="#certs-slider" data-slide-to="0")
-				li(data-target="#certs-slider" data-slide-to="1")
-				li(data-target="#certs-slider" data-slide-to="2")
 			.carousel-inner(role="listbox")
 				.item.active
 					+imgs('cert-slider-img', 'img/certs/cert-1.jpg', 'Сертификат 1')
 				each n in [2,3,4,5,6,7,8,9,10,11,12,13,14]
 					.item
 						+imgs('cert-slider-img', 'img/certs/cert-'+n+'.jpg', 'Сертификат '+n)
-			a.left.carousel-control(href="#certs-slider" role="button" data-slide="prev")
-				span.glyphicon.glyphicon-chevron-left(aria-hidden="true")
-			a.right.carousel-control(href="#certs-slider" role="button" data-slide="next")
-				span.glyphicon.glyphicon-chevron-right(aria-hidden="true")
-		#photos-slider.carousel.slide(data-ride="carousel")
 			.carousel-indicators
-				li.active(data-target="#photos-slider" data-slide-to="0")
-				li(data-target="#photos-slider" data-slide-to="1")
-				li(data-target="#photos-slider" data-slide-to="2")
+				li.active(data-target="#certs-slider" data-slide-to="0")
+				each l in [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+					li(data-target="#certs-slider" data-slide-to=l)
+			a.left.carousel-control(href="#certs-slider" role="button" data-slide="prev") <
+			a.right.carousel-control(href="#certs-slider" role="button" data-slide="next") >
+		#photos-slider.carousel.slide(data-ride="carousel")
 			.carousel-inner(role="listbox")
 				.item.active
 					+imgs('cert-slider-img', 'img/certs/photo-1.jpg', 'Сертификат 1')
@@ -29,7 +24,33 @@ section#certs
 						-f++
 						+imgs('cert-slider-img', 'img/certs/photo-'+f+'.jpg', 'Сертификат '+f)
 					//- each n in [2,3,4,5,6,7,8,9,10,11,12,13,14]
-			a.left.carousel-control(href="#photos-slider" role="button" data-slide="prev")
-				span.glyphicon.glyphicon-chevron-left(aria-hidden="true")
-			a.right.carousel-control(href="#photos-slider" role="button" data-slide="next")
-				span.glyphicon.glyphicon-chevron-right(aria-hidden="true")
+			.carousel-indicators
+				li.active(data-target="#photos-slider" data-slide-to="0")
+				-var e = 1;
+				while e <22
+					li(data-target="#photos-slider" data-slide-to=-e++)
+			a.left.carousel-control(href="#photos-slider" role="button" data-slide="prev") <
+			a.right.carousel-control(href="#photos-slider" role="button" data-slide="next") >
+		form(action!="https://shop.mv-centr.ru/?r=personal/newsletter/sub/add&id=25863&lg=ru&Contact[id_newsletter]=200" method="post" enctype="application/x-www-form-urlencoded" accept-charset="UTF-8").form.form-main
+			h5.form-title Подписка на анонсы по Арт-терапии
+			.name-block.name-block-form
+				input(type="hidden" value="1" name="required_fields[name]")
+				input(class="send-input input input-name input-name-main" name="Contact[name]" type="text" placeholder="Имя*" required)
+			.email-block.email-block-form
+				input(type="hidden" value="1" name="required_fields[email]")
+				input(class="send-input input input-mail input-mail-main" name="Contact[email]" type="text" placeholder="E-mail*" required)
+			button(type="submit").button.button-form.button-form-main Подписаться
+			.checking.checking-main
+				input(type="checkbox" id="check-1" required).check
+				label(for="check-1").check-label Я согласен с 
+					a(href="https://mastervision.su/politics-i.pdf" target="_blank") условиями обработки
+					|  персональных данных по 152 - Ф3
+			div(style="display: none;")
+			#formTypeSpecificVars-1(style="display: none;")
+				input(type="hidden" value="200" id="form_newsletter_id_newsletter_1" name="Contact[id_newsletter]")
+				<!-- API код канала рекламы -->
+				input(type="hidden" value="0" id="form_newsletter_id_advertising_channel_page_1" name="Contact[id_advertising_channel_page]")
+				input(type="hidden" name="formId" value="177")
+				input(type="hidden" name="formVc" value="2286077806")
+				input(type="hidden" name="_aid" value="192457")
+				input(type="hidden" name="_vcaid" value="3841275004")

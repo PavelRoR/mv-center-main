@@ -2,12 +2,16 @@ section#author
 	.container
 		+gt('', 'О специалисте:')
 		.row
-			.col-md-6.col-md-push-6
+			.col-md-5.col-md-push-7
 				+imgs('author-img', 'img/images/tamara.jpg', 'Тамара Кудряшова')
-			.col-md-6.col-md-pull-6
+			.col-md-7.col-md-pull-5
+				h4.author-title
+					a(href='https://www.instagram.com/tamara__kudryashova/' target='_blank') Тамара Кудряшова
 				ul.general-list
 					li Сертифицированный коуч
 					li Сертифицированный арт-терапевт
-					li Сертифицированный тренер программ личностного роста в области семейных отношений
+					li Сертифицированный тренер программ личностного роста 
+						br
+						| в области семейных отношений
 				a.insta(href='https://www.instagram.com/tamara__kudryashova/' target='_blank')
-					+imgs('', 'img/icons/insta.ico', 'Инстаграм')
+					+imgs('', 'img/icons/insta.png', 'Инстаграм')
